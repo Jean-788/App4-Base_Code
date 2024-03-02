@@ -39,7 +39,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
 
         var sinusheadache_count = 0; //declares variable and initializes the variable at a value/count of 0//
-        var cold_count = 0; //declares variable and initializes the variable at a value/count of 0//
+        var migraine_count = 0; //declares variable and initializes the variable at a value/count of 0//
 
 //the function below adds 1 to count stored in sinusheadache_count//
 	function sinusheadacheAdd(){
@@ -47,16 +47,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		alert(sinusheadache_count);
 
         }
-//the function below adds 1 to count stored in cold_count//
-	function coldAdd(){
-            cold_count = cold_count + 1;
+//the function below adds 1 to count stored in migraine_count//
+	function migraineAdd(){
+            migraine_count = migraine_count + 1;
         }
 
-	function results(){ //function used to calculate results: the percentage of having an sinus headache and the percentage of having a cold//
+	function results(){ //function used to calculate results: the percentage of having an sinus headache and the percentage of having a migraine//
 		var resultText = document.getElementById("results"); //declares variable that turns results into text//
 		var sinusheadachePercent = (sinusheadache_count/4)*100; //declares a variable that displays sinus headache percentage, the equation on the right divides sinus headache count by total sinus headache count of 4 multiplied by 100 to calculate percentage//
-		var coldPercent = (cold_count/4)*100; //declares a variable that displays cold percentage, the equation on the right divides cold count by total cold count of 4 multiplied by 100 to calculate percentage//
-		resultText.innerHTML = "Probability it is a sinus headache =" + sinusheadachePercent + "<br> Probability it is a cold =" + coldPercent; //changes what is between the <p id="results"></p> tags in the results page//
+		var migrainePercent = (migraine_count/4)*100; //declares a variable that displays migraine percentage, the equation on the right divides migraine count by total migraine count of 4 multiplied by 100 to calculate percentage//
+		resultText.innerHTML = "Probability it is a sinus headache =" + sinusheadachePercent + "<br> Probability it is a migraine =" + migrainePercent; //changes what is between the <p id="results"></p> tags in the results page//
 	}
 
 </script>	
@@ -108,7 +108,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	<div id="content" class="w3-container"> <!--creates white page background-->
 	<p>Are you experiencing nausea or vomiting?</p> <!--Displays Question 1 on page 1-->
 		<a href="#two"  onclick="sinusheadacheAdd();" class="w3-btn w3-black"> Yes</a> <!--creates a button that runs sinusheadacheAdd() function and adds 1 to sinus headache count when clicked which leads to page 2--> 
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--creates a button that runs coldAdd() function and adds 1 to cold count when clicked which leads to page 2-->	
+         	<a href="#two"  onclick="migraineAdd();" class="w3-btn w3-black">No</a> <!--creates a button that runs migraineAdd() function and adds 1 to migraine count when clicked which leads to page 2-->	
 	</div> <!--divides page-->
 </div> <!divides page-->
 
@@ -119,7 +119,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container"> <!--creates white page background-->
 	<p>Do you have thick, discolored nasal mucus?</p> <!--Displays Question 2 on page 2-->
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> <!--creates a button that runs coldAdd() function and adds 1 to cold count when clicked which leads to page 3-->
+		<a href="#three"  onclick="migraineAdd();" class="w3-btn w3-black">Yes</a> <!--creates a button that runs migraineAdd() function and adds 1 to migraine count when clicked which leads to page 3-->
 		<a href="#three"  onclick="sinusheadacheAdd();" class="w3-btn w3-black"> No</a> <!--creates a button that runs sinusheadacheAdd() function and adds 1 to sinus headache count when clicked which leads to page 3-->
 	</div> <!--divides page-->
 </div> <!--divides page-->
@@ -131,7 +131,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container"> <!--creates white page background-->
 	<p>Do you experience sensitivity to light or sound?</p> <!--displays Question 3 on page 3-->
-         	<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> <!--creates a button that runs coldAdd() function and adds 1 to cold count when clicked which leads to page 4-->
+         	<a href="#four"  onclick="migraineAdd();" class="w3-btn w3-black">Yes</a> <!--creates a button that runs migraineAdd() function and adds 1 to migraine count when clicked which leads to page 4-->
 		<a href="#four"  onclick="sinusheadacheAdd();" class="w3-btn w3-black"> No</a> <!--creates a button that runs sinusheadacheAdd() function and adds 1 to sinus headache count when clicked which leads to page 4-->
 	</div> <!--divides page-->
 </div> <!--divides page-->
@@ -144,7 +144,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container"> <!--creates white page background-->
 	<p>Have you missed a day of work or something else you’ve wanted to do in the past 3 months due to a headache?</p> <!--displays Question 4 on page 4-->
 		<a href="#five"  onclick="sinusheadacheAdd();" class="w3-btn w3-black"> Yes</a> <!--creates a button that runs sinusheadacheAdd() function and adds 1 to sinusheadache count when clicked which leads to page 5-->
-		<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a> <!--creates a button that runs coldAdd() function and adds 1 to cold count when clicked which leads to page 5-->
+		<a href="#five"  onclick="migraineAdd();" class="w3-btn w3-black">No</a> <!--creates a button that runs migraineAdd() function and adds 1 to migraine count when clicked which leads to page 5-->
 	</div> <!--divides page-->
 </div> <!--divides page-->
 
@@ -154,7 +154,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div> <!--ends header box-->
 	
 	<div id="content" class="w3-container"> <!--creates white page background-->
-		<a onclick="results();" class="w3-btn w3-black">Results</a> <!--creates a button that runs results() function and displays percentage results of both sinus headache and Cold when clicked-->
+		<a onclick="results();" class="w3-btn w3-black">Results</a> <!--creates a button that runs results() function and displays percentage results of both sinus headache and migraine when clicked-->
 		<p id="results"></p> <!--runs the variable "var resultText" and displays text-->
 	</div> <!divides page-->
 </div> <!divides page-->
